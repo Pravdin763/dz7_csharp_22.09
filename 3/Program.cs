@@ -31,7 +31,7 @@ void PrintArray(int[,] matr)
 }
 
 
-void average(int[,] matr)
+void Average(int[,] matr)
 {
     for (int j = 0; j < array.GetLength(1); j++)
     {
@@ -48,4 +48,4 @@ void average(int[,] matr)
 
 FillArray(array);
 PrintArray(array);
-average(array);
+Average(array);

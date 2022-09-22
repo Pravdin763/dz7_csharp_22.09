@@ -30,19 +30,22 @@ void PrintArray(int[,] matr)
     }
 }
 
-FillArray(array);
-PrintArray(array);
 
-
-for (int i = 0; i < array.GetLength(0); i++)
+void average(int[,] matr)
 {
-    int count = 0;
     for (int j = 0; j < array.GetLength(1); j++)
     {
-        count += array[j, i];
+        int count = 0;
+        for (int i = 0; i < array.GetLength(0); i++)
+        {
+            count += array[i, j];
+        }
+        double total = (double)count / (double)m;
+        Console.WriteLine($"Среднее арифметическое стобла {j + 1} = {Math.Round(total, 2)}");
     }
-    double total = count / (double)n;
-    Console.WriteLine($"Среднее арифметическое стобла {i + 1} = {Math.Round(total, 2)}");
 }
 
 
+FillArray(array);
+PrintArray(array);
+average(array);
